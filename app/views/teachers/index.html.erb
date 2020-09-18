@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Teachers</h2>
+  <ul class="list-group">
+    <% @teachers.each do |teacher| %>
+      <li class="list-group-item"><%= teacher.name %></li>
+    <% end %>
+  </ul>
+</div>

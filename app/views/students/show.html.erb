@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="student__title"><%=@student.name%></h2>
+
+  <p class="student__type">Student type: <%=@student.student_type%></p>
+
+  <%= form_with(model: @student, local: true) do |form| %>
+   <p>
+    <%= form.label :student_type %><br>
+    <%= form.select :student_type, [0,1] %>
+   </p>
+
+   <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+   </p>
+
+   <p>
+    <%= form.label :teacher_id %><br>
+    <%= form.select :teacher_id, options_from_collection_for_select(Teacher.all, 'id', 'name')  %>
+
+   <p>
+    <%= form.submit %>
+   </p>
+
+  <% end %>
+</div>

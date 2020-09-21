@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="teacher__title"><%=@teacher.name%></h2>
+
+  <ul class="list-group">
+    <% @teacher.students.each do |student| %>
+      <li class="list-group-item">
+        <a href="/students/<%=student.id %>">
+         <%= student.name %> (<%= student.student_type %>)
+        </a>
+      </li> 
+    <% end %>
+  </ul>
+</div>

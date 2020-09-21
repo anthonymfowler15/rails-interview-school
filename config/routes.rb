@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   resources :teachers do
   end
+  
+  resources :students
+
 end

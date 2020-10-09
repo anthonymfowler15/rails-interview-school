@@ -2,7 +2,7 @@
   <h2>Teachers</h2>
   <ul class="list-group">
     <% @teachers.each do |teacher| %>
-      <li class="list-group-item"><%= teacher.name %></li>
+      <li class="list-group-item"><a href = "/teachers/<%= teacher.id %>"><%= teacher.name %></a></li>
     <% end %>
   </ul>
 </div>

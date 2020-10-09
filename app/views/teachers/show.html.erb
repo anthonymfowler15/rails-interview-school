@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Teacher</h2>
+    <li class="list-group-item"><%= @teacher.name %></li>
+    <% @teacher.students.each do |student| %>
+      <li class="list-group-item"><a href = "/students/<%= student.id %>"><%= student.name %></a></li>
+    <% end %>
+</div>
+
